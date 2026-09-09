@@ -57,6 +57,11 @@ def entry_reference(number: int, url: str) -> str:
     return f"{url.split('#', 1)[0]}#awesome-2api-entry-{number}"
 
 
+def project_reference(number: int, url: str, index: int) -> str:
+    """Give each project link a distinct target, including repeated repositories."""
+    return f"{url.split('#', 1)[0]}#awesome-2api-project-{number}-{index}"
+
+
 def main() -> None:
     document = json.loads(DATA.read_text(encoding="utf-8"))
     entries = document["entries"]
@@ -68,6 +73,7 @@ def main() -> None:
     category_counts = Counter(str(entry[F["category"]]) for entry in entries)
     reference_ids: dict[str, str] = {}
     entry_urls: dict[int, str] = {}
+    project_urls: list[tuple[str, str]] = []
     for entry in entries:
         number = int(entry[F["number"]])
         urls = [url.strip() for url in str(entry[F["urls"]]).splitlines() if url.strip()]
@@ -130,17 +136,28 @@ def main() -> None:
         lines.extend([f"### {category}", ""])
         rows = []
         for entry in sorted(grouped[category], key=lambda item: int(item[F["number"]])):
+            number = int(entry[F["number"]])
             ids = [
                 reference_ids[url.strip()]
                 for url in str(entry[F["urls"]]).splitlines()
                 if url.strip()
             ]
+            urls = [url.strip() for url in str(entry[F["urls"]]).splitlines() if url.strip()]
+            projects = [project.strip() for project in str(entry[F["project"]]).split(";") if project.strip()]
+            linked_projects = []
+            for index, project in enumerate(projects, start=1):
+                if urls:
+                    label = f"p{number:03d}-{index}"
+                    linked_projects.append(f"[{md(project)}][{label}]")
+                    project_urls.append((label, project_reference(number, urls[min(index - 1, len(urls) - 1)], index)))
+                else:
+                    linked_projects.append(md(project))
             rows.append(
                 [
-                    f"[{entry[F['source']]}][e{int(entry[F['number']]):03d}]",
+                    f"[{entry[F['source']]}][e{number:03d}]",
                     str(entry[F["interface"]]),
                     str(entry[F["level"]]),
-                    f"{entry[F['project']]} ({', '.join(ids)})",
+                    "; ".join(linked_projects) + (f" ({', '.join(ids)})" if ids else ""),
                     str(entry[F["shape"]]),
                     str(entry[F["status"]]),
                 ]
@@ -155,16 +172,18 @@ def main() -> None:
         [
             "## References",
             "",
-            "Reference IDs in the catalog tables resolve to the public sources below. Each URL is listed once so repeated provider references remain readable.",
+            "The Reference project column links directly to each source repository. This section keeps every raw URL once so repeated provider references remain readable.",
             "",
         ]
     )
     for url, reference_id in reference_ids.items():
         lines.append(f"- **{reference_id}** — [public reference]({url})")
 
-    lines.extend(["", "<!-- Direct source links for each catalog row. -->"])
+    lines.extend(["", "<!-- Direct source and project links for each catalog row. -->"])
     for number, url in sorted(entry_urls.items()):
         lines.append(f"[e{number:03d}]: {url}")
+    for label, url in project_urls:
+        lines.append(f"[{label}]: {url}")
 
     lines.extend(
         [
