@@ -52,6 +52,11 @@ def table(headers: list[str], rows: list[list[str]]) -> list[str]:
     return lines
 
 
+def entry_reference(number: int, url: str) -> str:
+    """Give each catalog row a distinct direct-link target for Markdown lint."""
+    return f"{url.split('#', 1)[0]}#awesome-2api-entry-{number}"
+
+
 def main() -> None:
     document = json.loads(DATA.read_text(encoding="utf-8"))
     entries = document["entries"]
@@ -62,7 +67,12 @@ def main() -> None:
     level_counts = Counter(str(entry[F["level"]]).split("-", 1)[0] for entry in entries)
     category_counts = Counter(str(entry[F["category"]]) for entry in entries)
     reference_ids: dict[str, str] = {}
+    entry_urls: dict[int, str] = {}
     for entry in entries:
+        number = int(entry[F["number"]])
+        urls = [url.strip() for url in str(entry[F["urls"]]).splitlines() if url.strip()]
+        if urls:
+            entry_urls[number] = entry_reference(number, urls[0])
         for url in str(entry[F["urls"]]).splitlines():
             url = url.strip()
             if url and url not in reference_ids:
@@ -127,7 +137,7 @@ def main() -> None:
             ]
             rows.append(
                 [
-                    str(entry[F["source"]]),
+                    f"[{entry[F['source']]}][E{int(entry[F['number']]):03d}]",
                     str(entry[F["interface"]]),
                     str(entry[F["level"]]),
                     f"{entry[F['project']]} ({', '.join(ids)})",
@@ -151,6 +161,10 @@ def main() -> None:
     )
     for url, reference_id in reference_ids.items():
         lines.append(f"- **{reference_id}** — [public reference]({url})")
+
+    lines.extend(["", "<!-- Direct source links for each catalog row. -->"])
+    for number, url in sorted(entry_urls.items()):
+        lines.append(f"[E{number:03d}]: {url}")
 
     lines.extend(
         [

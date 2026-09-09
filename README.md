@@ -45,131 +45,131 @@ The current snapshot contains **93 source families** across **7 categories**. Th
 
 ### Coding / Subscription
 
-| Source                          | Generic interface        | Evidence | Reference project                                                           | Shape                              | Status |
-| ------------------------------- | ------------------------ | -------- | --------------------------------------------------------------------------- | ---------------------------------- | ------ |
-| Amazon Q Developer              | OpenAI-compatible        | B-聚合适配   | OmniRoute amazon-q (R01)                                                    | 产品鉴权                               | 纳入     |
-| Antigravity                     | OpenAI / Anthropic（依包装器） | A-直接反代   | router-for-me/CLIProxyAPI (R34)                                             | 产品 OAuth                           | 纳入     |
-| Augment Code / Auggie           | OpenAI-compatible        | A-直接反代   | linqiu919/augment2api; OmniRoute auggie (R35, R01)                          | 产品协议/可选CLI                         | 纳入     |
-| Claude Code 订阅入口                | OpenAI / Anthropic（依包装器） | A-直接反代   | router-for-me/CLIProxyAPI (R34)                                             | 产品 OAuth                           | 纳入     |
-| CodeBuddy（中国/国际配置）              | OpenAI-compatible        | A-直接反代   | xueyue33/codebuddy2api (R36)                                                | 产品登录/会话                            | 纳入     |
-| Codex 订阅入口                      | OpenAI-compatible        | A-直接反代   | router-for-me/CLIProxyAPI (R34)                                             | 产品 OAuth                           | 纳入     |
-| Cursor                          | OpenAI-compatible        | C-包装层    | tageecc/cursor-agent-api-proxy; OmniRoute; lza6/cursor-2api (R37, R01, R38) | CLI/产品会话                           | 纳入     |
-| Devin CLI 产品入口                  | OpenAI-compatible        | C-包装层    | OmniRoute devin-cli / devin-cli-agentic (R01)                               | 外部 CLI                             | 纳入     |
-| Freebuff / Codebuff 入口          | OpenAI-compatible        | A-直接反代   | lza6/Freebuff-2API (R39)                                                    | 产品协议                               | 纳入     |
-| Gemini CLI / Code Assist 路径     | OpenAI-compatible        | B-聚合适配   | g4f: GeminiCLI; CLIProxyAPI (R02, R34)                                      | CLI 关联产品鉴权                         | 纳入     |
-| GitHub Copilot（含 Enterprise 配置） | OpenAI-compatible        | A-直接反代   | messense/copilot-api-proxy (R40)                                            | 产品鉴权                               | 纳入     |
-| Grok Build / CLI                | OpenAI-compatible        | A-直接反代   | CLIProxyAPI; chenyme/grok2api (R34, R08)                                    | 产品 OAuth                           | 纳入     |
-| Kiro                            | OpenAI-compatible        | A-直接反代   | caidaoli/kiro2api (R41)                                                     | OAuth/产品协议                         | 纳入     |
-| Qoder                           | OpenAI-compatible        | C-包装层    | onehub-work/qoder-cli-api; OmniRoute; cubk1/qoder2api (R42, R01, R43)       | CLI/产品鉴权                           | 纳入     |
-| Qwen Code                       | OpenAI-compatible        | B-聚合适配   | g4f: QwenCode (R02)                                                         | 产品鉴权/待审计                           | 纳入     |
-| Trae / SOLO                     | OpenAI-compatible        | B-聚合适配   | OmniRoute trae (R01)                                                        | 产品会话                               | 纳入     |
-| v0 Web                          | OpenAI-compatible        | B-聚合适配   | OmniRoute v0-vercel-web (R01)                                               | Web 会话                             | 纳入     |
-| Warp AI                         | OpenAI-compatible        | A-直接反代   | Xchat1/Warp2Api (R44)                                                       | 产品 Protobuf                        | 纳入     |
-| Windsurf / Codeium              | OpenAI-compatible        | A-直接反代   | dwgx/WindsurfAPI (R45)                                                      | Language Server / Devin HTTPS 两条路径 | 纳入     |
-| ZCode 应用入口                      | OpenAI-compatible        | C-包装层    | OmniRoute zcode (R01)                                                       | 外部 app-server                      | 纳入     |
-| Zed 托管模型                        | OpenAI-compatible        | B-聚合适配   | OmniRoute zed-hosted (R01)                                                  | Zed 产品鉴权                           | 纳入     |
+| Source                                  | Generic interface        | Evidence | Reference project                                                           | Shape                              | Status |
+| --------------------------------------- | ------------------------ | -------- | --------------------------------------------------------------------------- | ---------------------------------- | ------ |
+| [Amazon Q Developer][E059]              | OpenAI-compatible        | B-聚合适配   | OmniRoute amazon-q (R01)                                                    | 产品鉴权                               | 纳入     |
+| [Antigravity][E060]                     | OpenAI / Anthropic（依包装器） | A-直接反代   | router-for-me/CLIProxyAPI (R34)                                             | 产品 OAuth                           | 纳入     |
+| [Augment Code / Auggie][E061]           | OpenAI-compatible        | A-直接反代   | linqiu919/augment2api; OmniRoute auggie (R35, R01)                          | 产品协议/可选CLI                         | 纳入     |
+| [Claude Code 订阅入口][E062]                | OpenAI / Anthropic（依包装器） | A-直接反代   | router-for-me/CLIProxyAPI (R34)                                             | 产品 OAuth                           | 纳入     |
+| [CodeBuddy（中国/国际配置）][E063]              | OpenAI-compatible        | A-直接反代   | xueyue33/codebuddy2api (R36)                                                | 产品登录/会话                            | 纳入     |
+| [Codex 订阅入口][E064]                      | OpenAI-compatible        | A-直接反代   | router-for-me/CLIProxyAPI (R34)                                             | 产品 OAuth                           | 纳入     |
+| [Cursor][E065]                          | OpenAI-compatible        | C-包装层    | tageecc/cursor-agent-api-proxy; OmniRoute; lza6/cursor-2api (R37, R01, R38) | CLI/产品会话                           | 纳入     |
+| [Devin CLI 产品入口][E066]                  | OpenAI-compatible        | C-包装层    | OmniRoute devin-cli / devin-cli-agentic (R01)                               | 外部 CLI                             | 纳入     |
+| [Freebuff / Codebuff 入口][E067]          | OpenAI-compatible        | A-直接反代   | lza6/Freebuff-2API (R39)                                                    | 产品协议                               | 纳入     |
+| [Gemini CLI / Code Assist 路径][E068]     | OpenAI-compatible        | B-聚合适配   | g4f: GeminiCLI; CLIProxyAPI (R02, R34)                                      | CLI 关联产品鉴权                         | 纳入     |
+| [GitHub Copilot（含 Enterprise 配置）][E069] | OpenAI-compatible        | A-直接反代   | messense/copilot-api-proxy (R40)                                            | 产品鉴权                               | 纳入     |
+| [Grok Build / CLI][E070]                | OpenAI-compatible        | A-直接反代   | CLIProxyAPI; chenyme/grok2api (R34, R08)                                    | 产品 OAuth                           | 纳入     |
+| [Kiro][E071]                            | OpenAI-compatible        | A-直接反代   | caidaoli/kiro2api (R41)                                                     | OAuth/产品协议                         | 纳入     |
+| [Qoder][E072]                           | OpenAI-compatible        | C-包装层    | onehub-work/qoder-cli-api; OmniRoute; cubk1/qoder2api (R42, R01, R43)       | CLI/产品鉴权                           | 纳入     |
+| [Qwen Code][E073]                       | OpenAI-compatible        | B-聚合适配   | g4f: QwenCode (R02)                                                         | 产品鉴权/待审计                           | 纳入     |
+| [Trae / SOLO][E074]                     | OpenAI-compatible        | B-聚合适配   | OmniRoute trae (R01)                                                        | 产品会话                               | 纳入     |
+| [v0 Web][E075]                          | OpenAI-compatible        | B-聚合适配   | OmniRoute v0-vercel-web (R01)                                               | Web 会话                             | 纳入     |
+| [Warp AI][E076]                         | OpenAI-compatible        | A-直接反代   | Xchat1/Warp2Api (R44)                                                       | 产品 Protobuf                        | 纳入     |
+| [Windsurf / Codeium][E077]              | OpenAI-compatible        | A-直接反代   | dwgx/WindsurfAPI (R45)                                                      | Language Server / Devin HTTPS 两条路径 | 纳入     |
+| [ZCode 应用入口][E078]                      | OpenAI-compatible        | C-包装层    | OmniRoute zcode (R01)                                                       | 外部 app-server                      | 纳入     |
+| [Zed 托管模型][E079]                        | OpenAI-compatible        | B-聚合适配   | OmniRoute zed-hosted (R01)                                                  | Zed 产品鉴权                           | 纳入     |
 
 ### In-App / Workspace
 
-| Source                           | Generic interface | Evidence | Reference project                                                    | Shape                | Status |
-| -------------------------------- | ----------------- | -------- | -------------------------------------------------------------------- | -------------------- | ------ |
-| Cloudflare AI Playground         | OpenAI-compatible | B-聚合适配   | OmniRoute cloudflare-playground (R01)                                | 浏览器/WS               | 纳入     |
-| Gemini Business / Enterprise Web | OpenAI-compatible | B-聚合适配   | OmniRoute gemini-business; lulistart/business-gemini-2api (R01, R46) | 企业会话                 | 纳入     |
-| Google AI Studio Build           | OpenAI-compatible | A-直接反代   | iBUHub/AIStudioToAPI (R47)                                           | 应用/浏览器协议             | 纳入     |
-| Google AI Studio Playground      | OpenAI-compatible | A-直接反代   | Mag1cFall/AIStudio2API (R48)                                         | 浏览器自动化（参考为 Camoufox） | 纳入     |
-| Google 搜索 AI Mode                | OpenAI-compatible | B-聚合适配   | g4f: GoogleAiMode (R02)                                              | 搜索产品模块               | 纳入     |
-| MaxAI                            | OpenAI-compatible | B-聚合适配   | OmniRoute maxai (R01)                                                | 应用会话                 | 纳入     |
-| Merlin                           | OpenAI-compatible | A-直接反代   | cchking/merlin2api (R49)                                             | 应用会话                 | 纳入     |
-| Microsoft 365 Copilot / BizChat  | OpenAI-compatible | B-聚合适配   | OmniRoute copilot-m365-web (R01)                                     | 企业会话/WS              | 纳入     |
-| Monica                           | OpenAI-compatible | A-直接反代   | SimonUTD/monica2api (R50)                                            | 应用会话                 | 纳入     |
-| Notion AI                        | OpenAI-compatible | A-直接反代   | lza6/notion-2api (R51)                                               | 工作区会话                | 纳入     |
-| Opera Aria                       | OpenAI-compatible | B-聚合适配   | g4f: OperaAria (R02)                                                 | 浏览器产品协议              | 纳入     |
-| PromptQL 应用聊天                    | OpenAI-compatible | B-聚合适配   | OmniRoute promptql (R01)                                             | 应用会话                 | 纳入     |
-| Raycast AI                       | OpenAI-compatible | A-直接反代   | xxxbrian/raycast2api (R52)                                           | 应用鉴权                 | 纳入     |
-| Sider                            | OpenAI-compatible | A-直接反代   | yeuxuan/sider2api (R53)                                              | 应用会话                 | 纳入     |
+| Source                                   | Generic interface | Evidence | Reference project                                                    | Shape                | Status |
+| ---------------------------------------- | ----------------- | -------- | -------------------------------------------------------------------- | -------------------- | ------ |
+| [Cloudflare AI Playground][E080]         | OpenAI-compatible | B-聚合适配   | OmniRoute cloudflare-playground (R01)                                | 浏览器/WS               | 纳入     |
+| [Gemini Business / Enterprise Web][E081] | OpenAI-compatible | B-聚合适配   | OmniRoute gemini-business; lulistart/business-gemini-2api (R01, R46) | 企业会话                 | 纳入     |
+| [Google AI Studio Build][E082]           | OpenAI-compatible | A-直接反代   | iBUHub/AIStudioToAPI (R47)                                           | 应用/浏览器协议             | 纳入     |
+| [Google AI Studio Playground][E083]      | OpenAI-compatible | A-直接反代   | Mag1cFall/AIStudio2API (R48)                                         | 浏览器自动化（参考为 Camoufox） | 纳入     |
+| [Google 搜索 AI Mode][E084]                | OpenAI-compatible | B-聚合适配   | g4f: GoogleAiMode (R02)                                              | 搜索产品模块               | 纳入     |
+| [MaxAI][E085]                            | OpenAI-compatible | B-聚合适配   | OmniRoute maxai (R01)                                                | 应用会话                 | 纳入     |
+| [Merlin][E086]                           | OpenAI-compatible | A-直接反代   | cchking/merlin2api (R49)                                             | 应用会话                 | 纳入     |
+| [Microsoft 365 Copilot / BizChat][E087]  | OpenAI-compatible | B-聚合适配   | OmniRoute copilot-m365-web (R01)                                     | 企业会话/WS              | 纳入     |
+| [Monica][E088]                           | OpenAI-compatible | A-直接反代   | SimonUTD/monica2api (R50)                                            | 应用会话                 | 纳入     |
+| [Notion AI][E089]                        | OpenAI-compatible | A-直接反代   | lza6/notion-2api (R51)                                               | 工作区会话                | 纳入     |
+| [Opera Aria][E090]                       | OpenAI-compatible | B-聚合适配   | g4f: OperaAria (R02)                                                 | 浏览器产品协议              | 纳入     |
+| [PromptQL 应用聊天][E091]                    | OpenAI-compatible | B-聚合适配   | OmniRoute promptql (R01)                                             | 应用会话                 | 纳入     |
+| [Raycast AI][E092]                       | OpenAI-compatible | A-直接反代   | xxxbrian/raycast2api (R52)                                           | 应用鉴权                 | 纳入     |
+| [Sider][E093]                            | OpenAI-compatible | A-直接反代   | yeuxuan/sider2api (R53)                                              | 应用会话                 | 纳入     |
 
 ### 嵌入式 / App 内助手
 
-| Source | Generic interface           | Evidence | Reference project             | Shape         | Status |
-| ------ | --------------------------- | -------- | ----------------------------- | ------------- | ------ |
-| 国家反诈AI | OpenAI /v1/chat/completions | A-直接反代   | lfzk550/fanzha-ai-proxy (R20) | App/小程序内置聊天助手 | 纳入     |
+| Source         | Generic interface           | Evidence | Reference project             | Shape         | Status |
+| -------------- | --------------------------- | -------- | ----------------------------- | ------------- | ------ |
+| [国家反诈AI][E046] | OpenAI /v1/chat/completions | A-直接反代   | lfzk550/fanzha-ai-proxy (R20) | App/小程序内置聊天助手 | 纳入     |
 
 ### 嵌入式 / Web 助手
 
-| Source            | Generic interface             | Evidence | Reference project                       | Shape          | Status |
-| ----------------- | ----------------------------- | -------- | --------------------------------------- | -------------- | ------ |
-| AI Free Forever   | OpenAI-style chat/completions | A-直接反代   | lza6/Aifreeforever-2api (R23)           | 免费 Web 聊天      | 纳入     |
-| ChatAI GPT        | OpenAI /v1/chat/completions   | A-直接反代   | lza6/Chataigpt-2api (R24)               | 多模型 Web 聊天     | 纳入     |
-| chatgptfree.ai    | OpenAI /v1/chat/completions   | A-直接反代   | lza6/FreeAIchat-2api (R25)              | 免费网站聊天助手       | 纳入     |
-| EaseMate AI       | OpenAI /v1/chat/completions   | A-直接反代   | lza6/easemate-2api (R26)                | Web 聊天助手       | 纳入     |
-| Flowith           | OpenAI /v1/chat/completions   | A-直接反代   | lza6/flowith-2api (R27)                 | Web 聊天/Agent   | 纳入     |
-| GPTAnon           | OpenAI /v1/chat/completions   | A-直接反代   | lza6/gptanon-2api-cfwork (R28)          | 匿名/免费 Web 聊天   | 纳入     |
-| Inkeep            | OpenAI /v1/chat/completions   | A-直接反代   | lza6/inkeep-2api (R29)                  | 网站内嵌 AI 聊天     | 纳入     |
-| LangFast          | OpenAI /v1/chat/completions   | A-直接反代   | lza6/langfast-2api (R30)                | Web AI 助手      | 纳入     |
-| LiaoBots          | OpenAI /v1/chat/completions   | A-直接反代   | lza6/liaobots-2api-cfwork (R31)         | 多模型 Web 聊天     | 纳入     |
-| Perfect Assistant | OpenAI /v1/chat/completions   | A-直接反代   | lza6/perfectassistant-2api-cfwork (R32) | Web 内置聊天助手     | 纳入     |
-| ToolBaz Chat      | OpenAI /v1/chat/completions   | A-直接反代   | lza6/toolbaz-2api-docker (R33)          | 免费 Web AI Chat | 纳入     |
+| Source                    | Generic interface             | Evidence | Reference project                       | Shape          | Status |
+| ------------------------- | ----------------------------- | -------- | --------------------------------------- | -------------- | ------ |
+| [AI Free Forever][E048]   | OpenAI-style chat/completions | A-直接反代   | lza6/Aifreeforever-2api (R23)           | 免费 Web 聊天      | 纳入     |
+| [ChatAI GPT][E049]        | OpenAI /v1/chat/completions   | A-直接反代   | lza6/Chataigpt-2api (R24)               | 多模型 Web 聊天     | 纳入     |
+| [chatgptfree.ai][E050]    | OpenAI /v1/chat/completions   | A-直接反代   | lza6/FreeAIchat-2api (R25)              | 免费网站聊天助手       | 纳入     |
+| [EaseMate AI][E051]       | OpenAI /v1/chat/completions   | A-直接反代   | lza6/easemate-2api (R26)                | Web 聊天助手       | 纳入     |
+| [Flowith][E052]           | OpenAI /v1/chat/completions   | A-直接反代   | lza6/flowith-2api (R27)                 | Web 聊天/Agent   | 纳入     |
+| [GPTAnon][E053]           | OpenAI /v1/chat/completions   | A-直接反代   | lza6/gptanon-2api-cfwork (R28)          | 匿名/免费 Web 聊天   | 纳入     |
+| [Inkeep][E054]            | OpenAI /v1/chat/completions   | A-直接反代   | lza6/inkeep-2api (R29)                  | 网站内嵌 AI 聊天     | 纳入     |
+| [LangFast][E055]          | OpenAI /v1/chat/completions   | A-直接反代   | lza6/langfast-2api (R30)                | Web AI 助手      | 纳入     |
+| [LiaoBots][E056]          | OpenAI /v1/chat/completions   | A-直接反代   | lza6/liaobots-2api-cfwork (R31)         | 多模型 Web 聊天     | 纳入     |
+| [Perfect Assistant][E057] | OpenAI /v1/chat/completions   | A-直接反代   | lza6/perfectassistant-2api-cfwork (R32) | Web 内置聊天助手     | 纳入     |
+| [ToolBaz Chat][E058]      | OpenAI /v1/chat/completions   | A-直接反代   | lza6/toolbaz-2api-docker (R33)          | 免费 Web AI Chat | 纳入     |
 
 ### 嵌入式 / 浏览器内助手
 
-| Source       | Generic interface                          | Evidence | Reference project                                 | Shape          | Status |
-| ------------ | ------------------------------------------ | -------- | ------------------------------------------------- | -------------- | ------ |
-| Tabbit 内置 AI | OpenAI Chat/Responses + Anthropic Messages | A-直接反代   | hoinata/tabbit2api; hwttop5/tabbit2api (R21, R22) | 浏览器侧边栏/内置多模型助手 | 纳入     |
+| Source               | Generic interface                          | Evidence | Reference project                                 | Shape          | Status |
+| -------------------- | ------------------------------------------ | -------- | ------------------------------------------------- | -------------- | ------ |
+| [Tabbit 内置 AI][E047] | OpenAI Chat/Responses + Anthropic Messages | A-直接反代   | hoinata/tabbit2api; hwttop5/tabbit2api (R21, R22) | 浏览器侧边栏/内置多模型助手 | 纳入     |
 
 ### 网页 / App Chatbot
 
-| Source              | Generic interface | Evidence | Reference project                                                 | Shape      | Status |
-| ------------------- | ----------------- | -------- | ----------------------------------------------------------------- | ---------- | ------ |
-| DeepSeek Web        | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API; lza6/Deepseek-2api (R11, R12)                  | Web 会话     | 纳入     |
-| Dola 国际站            | OpenAI-compatible | B-聚合适配   | OmniRoute doubao-web (R01)                                        | Web 会话     | 纳入     |
-| Kimi Web            | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API; lza6/kimi-ai-2api (R11, R13)                   | Web 会话     | 纳入     |
-| MiniMax Web / Agent | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API (R11)                                           | Web/App 会话 | 纳入     |
-| Qwen Chat 国际站       | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API; lza6/Qwen-2api (R11, R14)                      | Web 会话     | 纳入     |
-| Z.ai Web            | OpenAI-compatible | B-聚合适配   | Chat2API; OmniRoute; lza6/zai.is-2api-python (R11, R01, R15)      | Web 会话     | 纳入     |
-| 小米 MiMo Web         | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API (R11)                                           | Web 会话     | 纳入     |
-| 智谱清言 / GLM Web      | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API (R11)                                           | Web 会话     | 纳入     |
-| 秘塔 AI 搜索            | OpenAI-compatible | B-聚合适配   | step-free-api README: metaso-free-api (R16)                       | 待审计        | 纳入     |
-| 聆心智能 / Emohaa       | OpenAI-compatible | B-聚合适配   | step-free-api README: emohaa-free-api (R16)                       | 待审计        | 纳入     |
-| 腾讯 AI Studio        | OpenAI-compatible | B-聚合适配   | OmniRoute tencent-aistudio-web (R01)                              | Web 会话     | 纳入     |
-| 腾讯元宝                | OpenAI-compatible | A-直接反代   | chenwr727/yuanbao-free-api (R17)                                  | Web/App 会话 | 纳入     |
-| 讯飞星火                | OpenAI-compatible | B-聚合适配   | step-free-api README 索引; SelfExistFiles/spark-free-api (R16, R18) | 待审计        | 纳入     |
-| 豆包中国站               | OpenAI-compatible | A-直接反代   | lza6/doubao-2api (R19)                                            | 浏览器/站点会话   | 纳入     |
-| 跃问 / StepChat       | OpenAI-compatible | A-直接反代   | jonnyquan/step-free-api (R16)                                     | Web 会话     | 纳入     |
-| 通义 / Qwen 中国站       | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API; lza6/Qwen-2api (R11, R14)                      | 站点登录       | 纳入     |
+| Source                      | Generic interface | Evidence | Reference project                                                 | Shape      | Status |
+| --------------------------- | ----------------- | -------- | ----------------------------------------------------------------- | ---------- | ------ |
+| [DeepSeek Web][E030]        | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API; lza6/Deepseek-2api (R11, R12)                  | Web 会话     | 纳入     |
+| [Dola 国际站][E031]            | OpenAI-compatible | B-聚合适配   | OmniRoute doubao-web (R01)                                        | Web 会话     | 纳入     |
+| [Kimi Web][E032]            | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API; lza6/kimi-ai-2api (R11, R13)                   | Web 会话     | 纳入     |
+| [MiniMax Web / Agent][E033] | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API (R11)                                           | Web/App 会话 | 纳入     |
+| [Qwen Chat 国际站][E034]       | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API; lza6/Qwen-2api (R11, R14)                      | Web 会话     | 纳入     |
+| [Z.ai Web][E035]            | OpenAI-compatible | B-聚合适配   | Chat2API; OmniRoute; lza6/zai.is-2api-python (R11, R01, R15)      | Web 会话     | 纳入     |
+| [小米 MiMo Web][E036]         | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API (R11)                                           | Web 会话     | 纳入     |
+| [智谱清言 / GLM Web][E037]      | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API (R11)                                           | Web 会话     | 纳入     |
+| [秘塔 AI 搜索][E038]            | OpenAI-compatible | B-聚合适配   | step-free-api README: metaso-free-api (R16)                       | 待审计        | 纳入     |
+| [聆心智能 / Emohaa][E039]       | OpenAI-compatible | B-聚合适配   | step-free-api README: emohaa-free-api (R16)                       | 待审计        | 纳入     |
+| [腾讯 AI Studio][E040]        | OpenAI-compatible | B-聚合适配   | OmniRoute tencent-aistudio-web (R01)                              | Web 会话     | 纳入     |
+| [腾讯元宝][E041]                | OpenAI-compatible | A-直接反代   | chenwr727/yuanbao-free-api (R17)                                  | Web/App 会话 | 纳入     |
+| [讯飞星火][E042]                | OpenAI-compatible | B-聚合适配   | step-free-api README 索引; SelfExistFiles/spark-free-api (R16, R18) | 待审计        | 纳入     |
+| [豆包中国站][E043]               | OpenAI-compatible | A-直接反代   | lza6/doubao-2api (R19)                                            | 浏览器/站点会话   | 纳入     |
+| [跃问 / StepChat][E044]       | OpenAI-compatible | A-直接反代   | jonnyquan/step-free-api (R16)                                     | Web 会话     | 纳入     |
+| [通义 / Qwen 中国站][E045]       | OpenAI-compatible | A-直接反代   | xiaoY233/Chat2API; lza6/Qwen-2api (R11, R14)                      | 站点登录       | 纳入     |
 
 ### 网页 Chatbot
 
-| Source                      | Generic interface         | Evidence | Reference project                                              | Shape            | Status |
-| --------------------------- | ------------------------- | -------- | -------------------------------------------------------------- | ---------------- | ------ |
-| Adapta One                  | OpenAI-compatible         | B-聚合适配   | OmniRoute adapta-web (R01)                                     | Web 会话           | 纳入     |
-| Arena / LMArena             | OpenAI-compatible         | B-聚合适配   | g4f: LMArena; OmniRoute lmarena (R02, R01)                     | Web 会话           | 纳入     |
-| BLACKBOX AI Web             | OpenAI-compatible         | B-聚合适配   | g4f: BlackboxPro; OmniRoute blackbox-web (R02, R01)            | Web 会话           | 纳入     |
-| ChatGPT Web                 | OpenAI-compatible         | A-直接反代   | aurorax-neo/chat2api; Octo-Lex/ChatGPT-Web2API (R03, R04)      | 会话；HTTP/流式；可选CDP | 纳入     |
-| Claude Web                  | OpenAI / Anthropic（依参考实现） | A-直接反代   | yushangxiao/claude2api (R05)                                   | 会话；HTTP/流式       | 纳入     |
-| Conol                       | OpenAI-compatible         | B-聚合适配   | OmniRoute conol-web (R01)                                      | Web 会话           | 纳入     |
-| Duck.ai                     | OpenAI-compatible         | B-聚合适配   | g4f; OmniRoute duckduckgo-web (R02, R01)                       | 站点会话             | 纳入     |
-| Gemini Web                  | OpenAI-compatible         | A-直接反代   | ntthanh2603/gemini-web-to-api (R06)                            | 会话；Web 协议        | 纳入     |
-| Genspark                    | OpenAI-compatible         | A-直接反代   | deanxv/genspark2api (R07)                                      | Web/App 会话       | 纳入     |
-| GigaChat                    | OpenAI-compatible         | B-聚合适配   | g4f: GigaChat (R02)                                            | 模块待审计            | 纳入     |
-| Grok Console 产品入口           | OpenAI-compatible         | A-直接反代   | chenyme/grok2api (R08)                                         | 产品鉴权             | 纳入     |
-| Grok Web                    | OpenAI-compatible         | A-直接反代   | chenyme/grok2api (R08)                                         | Web 会话           | 纳入     |
-| HuggingChat                 | OpenAI-compatible         | B-聚合适配   | g4f: HuggingChat; OmniRoute (R02, R01)                         | Web 会话           | 纳入     |
-| HyperAgent                  | OpenAI-compatible         | B-聚合适配   | OmniRoute hyperagent (R01)                                     | Web 会话           | 纳入     |
-| Inner AI                    | OpenAI-compatible         | B-聚合适配   | OmniRoute inner-ai (R01)                                       | Web 会话           | 纳入     |
-| Meta AI Web                 | OpenAI-compatible         | B-聚合适配   | g4f: MetaAI/MetaAIAccount; OmniRoute muse-spark-web (R02, R01) | Web 会话/实时事件      | 纳入     |
-| Microsoft Copilot Web / App | OpenAI-compatible         | B-聚合适配   | g4f: Copilot/CopilotApp; OmniRoute (R02, R01)                  | Web/App 会话       | 纳入     |
-| Perplexity Web              | OpenAI-compatible         | A-直接反代   | jamie950315/pplx-proxy (R09)                                   | Web 会话           | 纳入     |
-| Phind                       | OpenAI-compatible         | B-聚合适配   | g4f: PhindAi (R02)                                             | 模块待审计            | 纳入     |
-| Pi                          | OpenAI-compatible         | B-聚合适配   | g4f: Pi (R02)                                                  | 模块待审计            | 纳入     |
-| Poe Web / Bot marketplace   | OpenAI-compatible         | B-聚合适配   | OmniRoute poe-web; snowby666/poe-api-wrapper (R01, R10)        | Bot + Web 会话     | 纳入     |
-| Reka Chat                   | OpenAI-compatible         | B-聚合适配   | g4f: Reka (R02)                                                | 模块待审计            | 纳入     |
-| T3 Chat                     | OpenAI-compatible         | B-聚合适配   | OmniRoute t3-web (R01)                                         | Web 会话           | 纳入     |
-| TinyCMS AI                  | OpenAI-compatible         | B-聚合适配   | OmniRoute tinycms-web (R01)                                    | Web/App 会话       | 纳入     |
-| UC / uncensored.com         | OpenAI-compatible         | B-聚合适配   | OmniRoute uc (R01)                                             | Web 会话           | 纳入     |
-| Venice Web                  | OpenAI-compatible         | B-聚合适配   | OmniRoute venice-web (R01)                                     | Web 会话           | 纳入     |
-| WhiteRabbitNeo              | OpenAI-compatible         | B-聚合适配   | g4f: WhiteRabbitNeo (R02)                                      | 模块待审计            | 纳入     |
-| You.com                     | OpenAI-compatible         | B-聚合适配   | g4f: You (R02)                                                 | 模块待审计            | 纳入     |
-| ZenMux Web                  | OpenAI-compatible         | B-聚合适配   | OmniRoute zenmux-free (R01)                                    | Web 会话           | 纳入     |
+| Source                              | Generic interface         | Evidence | Reference project                                              | Shape            | Status |
+| ----------------------------------- | ------------------------- | -------- | -------------------------------------------------------------- | ---------------- | ------ |
+| [Adapta One][E001]                  | OpenAI-compatible         | B-聚合适配   | OmniRoute adapta-web (R01)                                     | Web 会话           | 纳入     |
+| [Arena / LMArena][E002]             | OpenAI-compatible         | B-聚合适配   | g4f: LMArena; OmniRoute lmarena (R02, R01)                     | Web 会话           | 纳入     |
+| [BLACKBOX AI Web][E003]             | OpenAI-compatible         | B-聚合适配   | g4f: BlackboxPro; OmniRoute blackbox-web (R02, R01)            | Web 会话           | 纳入     |
+| [ChatGPT Web][E004]                 | OpenAI-compatible         | A-直接反代   | aurorax-neo/chat2api; Octo-Lex/ChatGPT-Web2API (R03, R04)      | 会话；HTTP/流式；可选CDP | 纳入     |
+| [Claude Web][E005]                  | OpenAI / Anthropic（依参考实现） | A-直接反代   | yushangxiao/claude2api (R05)                                   | 会话；HTTP/流式       | 纳入     |
+| [Conol][E006]                       | OpenAI-compatible         | B-聚合适配   | OmniRoute conol-web (R01)                                      | Web 会话           | 纳入     |
+| [Duck.ai][E007]                     | OpenAI-compatible         | B-聚合适配   | g4f; OmniRoute duckduckgo-web (R02, R01)                       | 站点会话             | 纳入     |
+| [Gemini Web][E008]                  | OpenAI-compatible         | A-直接反代   | ntthanh2603/gemini-web-to-api (R06)                            | 会话；Web 协议        | 纳入     |
+| [Genspark][E009]                    | OpenAI-compatible         | A-直接反代   | deanxv/genspark2api (R07)                                      | Web/App 会话       | 纳入     |
+| [GigaChat][E010]                    | OpenAI-compatible         | B-聚合适配   | g4f: GigaChat (R02)                                            | 模块待审计            | 纳入     |
+| [Grok Console 产品入口][E011]           | OpenAI-compatible         | A-直接反代   | chenyme/grok2api (R08)                                         | 产品鉴权             | 纳入     |
+| [Grok Web][E012]                    | OpenAI-compatible         | A-直接反代   | chenyme/grok2api (R08)                                         | Web 会话           | 纳入     |
+| [HuggingChat][E013]                 | OpenAI-compatible         | B-聚合适配   | g4f: HuggingChat; OmniRoute (R02, R01)                         | Web 会话           | 纳入     |
+| [HyperAgent][E014]                  | OpenAI-compatible         | B-聚合适配   | OmniRoute hyperagent (R01)                                     | Web 会话           | 纳入     |
+| [Inner AI][E015]                    | OpenAI-compatible         | B-聚合适配   | OmniRoute inner-ai (R01)                                       | Web 会话           | 纳入     |
+| [Meta AI Web][E016]                 | OpenAI-compatible         | B-聚合适配   | g4f: MetaAI/MetaAIAccount; OmniRoute muse-spark-web (R02, R01) | Web 会话/实时事件      | 纳入     |
+| [Microsoft Copilot Web / App][E017] | OpenAI-compatible         | B-聚合适配   | g4f: Copilot/CopilotApp; OmniRoute (R02, R01)                  | Web/App 会话       | 纳入     |
+| [Perplexity Web][E018]              | OpenAI-compatible         | A-直接反代   | jamie950315/pplx-proxy (R09)                                   | Web 会话           | 纳入     |
+| [Phind][E019]                       | OpenAI-compatible         | B-聚合适配   | g4f: PhindAi (R02)                                             | 模块待审计            | 纳入     |
+| [Pi][E020]                          | OpenAI-compatible         | B-聚合适配   | g4f: Pi (R02)                                                  | 模块待审计            | 纳入     |
+| [Poe Web / Bot marketplace][E021]   | OpenAI-compatible         | B-聚合适配   | OmniRoute poe-web; snowby666/poe-api-wrapper (R01, R10)        | Bot + Web 会话     | 纳入     |
+| [Reka Chat][E022]                   | OpenAI-compatible         | B-聚合适配   | g4f: Reka (R02)                                                | 模块待审计            | 纳入     |
+| [T3 Chat][E023]                     | OpenAI-compatible         | B-聚合适配   | OmniRoute t3-web (R01)                                         | Web 会话           | 纳入     |
+| [TinyCMS AI][E024]                  | OpenAI-compatible         | B-聚合适配   | OmniRoute tinycms-web (R01)                                    | Web/App 会话       | 纳入     |
+| [UC / uncensored.com][E025]         | OpenAI-compatible         | B-聚合适配   | OmniRoute uc (R01)                                             | Web 会话           | 纳入     |
+| [Venice Web][E026]                  | OpenAI-compatible         | B-聚合适配   | OmniRoute venice-web (R01)                                     | Web 会话           | 纳入     |
+| [WhiteRabbitNeo][E027]              | OpenAI-compatible         | B-聚合适配   | g4f: WhiteRabbitNeo (R02)                                      | 模块待审计            | 纳入     |
+| [You.com][E028]                     | OpenAI-compatible         | B-聚合适配   | g4f: You (R02)                                                 | 模块待审计            | 纳入     |
+| [ZenMux Web][E029]                  | OpenAI-compatible         | B-聚合适配   | OmniRoute zenmux-free (R01)                                    | Web 会话           | 纳入     |
 
 ## References
 
@@ -228,6 +228,101 @@ Reference IDs in the catalog tables resolve to the public sources below. Each UR
 - **R51** — [public reference](https://github.com/lza6/notion-2api)
 - **R52** — [public reference](https://github.com/xxxbrian/raycast2api)
 - **R53** — [public reference](https://github.com/yeuxuan/sider2api)
+
+<!-- Direct source links for each catalog row. -->
+[E001]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-1
+[E002]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-2
+[E003]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-3
+[E004]: https://github.com/aurorax-neo/chat2api#awesome-2api-entry-4
+[E005]: https://github.com/yushangxiao/claude2api#awesome-2api-entry-5
+[E006]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-6
+[E007]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-7
+[E008]: https://github.com/ntthanh2603/gemini-web-to-api#awesome-2api-entry-8
+[E009]: https://github.com/deanxv/genspark2api#awesome-2api-entry-9
+[E010]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-10
+[E011]: https://github.com/chenyme/grok2api#awesome-2api-entry-11
+[E012]: https://github.com/chenyme/grok2api#awesome-2api-entry-12
+[E013]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-13
+[E014]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-14
+[E015]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-15
+[E016]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-16
+[E017]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-17
+[E018]: https://github.com/jamie950315/pplx-proxy#awesome-2api-entry-18
+[E019]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-19
+[E020]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-20
+[E021]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-21
+[E022]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-22
+[E023]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-23
+[E024]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-24
+[E025]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-25
+[E026]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-26
+[E027]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-27
+[E028]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-28
+[E029]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-29
+[E030]: https://github.com/xiaoY233/Chat2API#awesome-2api-entry-30
+[E031]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-31
+[E032]: https://github.com/xiaoY233/Chat2API#awesome-2api-entry-32
+[E033]: https://github.com/xiaoY233/Chat2API#awesome-2api-entry-33
+[E034]: https://github.com/xiaoY233/Chat2API#awesome-2api-entry-34
+[E035]: https://github.com/xiaoY233/Chat2API#awesome-2api-entry-35
+[E036]: https://github.com/xiaoY233/Chat2API#awesome-2api-entry-36
+[E037]: https://github.com/xiaoY233/Chat2API#awesome-2api-entry-37
+[E038]: https://github.com/jonnyquan/step-free-api#awesome-2api-entry-38
+[E039]: https://github.com/jonnyquan/step-free-api#awesome-2api-entry-39
+[E040]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-40
+[E041]: https://github.com/chenwr727/yuanbao-free-api#awesome-2api-entry-41
+[E042]: https://github.com/jonnyquan/step-free-api#awesome-2api-entry-42
+[E043]: https://github.com/lza6/doubao-2api#awesome-2api-entry-43
+[E044]: https://github.com/jonnyquan/step-free-api#awesome-2api-entry-44
+[E045]: https://github.com/xiaoY233/Chat2API#awesome-2api-entry-45
+[E046]: https://github.com/lfzk550/fanzha-ai-proxy#awesome-2api-entry-46
+[E047]: https://github.com/hoinata/tabbit2api#awesome-2api-entry-47
+[E048]: https://github.com/lza6/Aifreeforever-2api#awesome-2api-entry-48
+[E049]: https://github.com/lza6/Chataigpt-2api#awesome-2api-entry-49
+[E050]: https://github.com/lza6/FreeAIchat-2api#awesome-2api-entry-50
+[E051]: https://github.com/lza6/easemate-2api#awesome-2api-entry-51
+[E052]: https://github.com/lza6/flowith-2api#awesome-2api-entry-52
+[E053]: https://github.com/lza6/gptanon-2api-cfwork#awesome-2api-entry-53
+[E054]: https://github.com/lza6/inkeep-2api#awesome-2api-entry-54
+[E055]: https://github.com/lza6/langfast-2api#awesome-2api-entry-55
+[E056]: https://github.com/lza6/liaobots-2api-cfwork#awesome-2api-entry-56
+[E057]: https://github.com/lza6/perfectassistant-2api-cfwork#awesome-2api-entry-57
+[E058]: https://github.com/lza6/toolbaz-2api-docker#awesome-2api-entry-58
+[E059]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-59
+[E060]: https://github.com/router-for-me/CLIProxyAPI#awesome-2api-entry-60
+[E061]: https://github.com/linqiu919/augment2api#awesome-2api-entry-61
+[E062]: https://github.com/router-for-me/CLIProxyAPI#awesome-2api-entry-62
+[E063]: https://github.com/xueyue33/codebuddy2api#awesome-2api-entry-63
+[E064]: https://github.com/router-for-me/CLIProxyAPI#awesome-2api-entry-64
+[E065]: https://github.com/tageecc/cursor-agent-api-proxy#awesome-2api-entry-65
+[E066]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-66
+[E067]: https://github.com/lza6/Freebuff-2API#awesome-2api-entry-67
+[E068]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-68
+[E069]: https://github.com/messense/copilot-api-proxy#awesome-2api-entry-69
+[E070]: https://github.com/router-for-me/CLIProxyAPI#awesome-2api-entry-70
+[E071]: https://github.com/caidaoli/kiro2api#awesome-2api-entry-71
+[E072]: https://github.com/onehub-work/qoder-cli-api#awesome-2api-entry-72
+[E073]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-73
+[E074]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-74
+[E075]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-75
+[E076]: https://github.com/Xchat1/Warp2Api#awesome-2api-entry-76
+[E077]: https://github.com/dwgx/WindsurfAPI#awesome-2api-entry-77
+[E078]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-78
+[E079]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-79
+[E080]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-80
+[E081]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-81
+[E082]: https://github.com/iBUHub/AIStudioToAPI#awesome-2api-entry-82
+[E083]: https://github.com/Mag1cFall/AIStudio2API#awesome-2api-entry-83
+[E084]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-84
+[E085]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-85
+[E086]: https://github.com/cchking/merlin2api#awesome-2api-entry-86
+[E087]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-87
+[E088]: https://github.com/SimonUTD/monica2api#awesome-2api-entry-88
+[E089]: https://github.com/lza6/notion-2api#awesome-2api-entry-89
+[E090]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-90
+[E091]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-91
+[E092]: https://github.com/xxxbrian/raycast2api#awesome-2api-entry-92
+[E093]: https://github.com/yeuxuan/sider2api#awesome-2api-entry-93
 
 ## Data and maintenance
 
