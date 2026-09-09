@@ -102,7 +102,7 @@ def main() -> None:
         "",
         "不收录官方 API-only SDK、纯媒体/业务工具、只有产品宣传的候选项，或没有公开适配器证据的逆向笔记。链接不代表当前可用性、额度、许可或服务条款允许。",
         "",
-        "Machine-readable data: [sources.json](sources.json) · Run python scripts/generate_readme.py to refresh this table.",
+        "Machine-readable data: [sources.json](sources.json) · Run Python scripts/generate_readme.py to refresh this table.",
         "",
         "## Catalog",
         "",
