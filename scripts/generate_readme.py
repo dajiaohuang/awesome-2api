@@ -137,7 +137,7 @@ def main() -> None:
             ]
             rows.append(
                 [
-                    f"[{entry[F['source']]}][E{int(entry[F['number']]):03d}]",
+                    f"[{entry[F['source']]}][e{int(entry[F['number']]):03d}]",
                     str(entry[F["interface"]]),
                     str(entry[F["level"]]),
                     f"{entry[F['project']]} ({', '.join(ids)})",
@@ -164,7 +164,7 @@ def main() -> None:
 
     lines.extend(["", "<!-- Direct source links for each catalog row. -->"])
     for number, url in sorted(entry_urls.items()):
-        lines.append(f"[E{number:03d}]: {url}")
+        lines.append(f"[e{number:03d}]: {url}")
 
     lines.extend(
         [
