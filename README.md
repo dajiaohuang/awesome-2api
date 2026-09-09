@@ -6,7 +6,7 @@
 > Companion implementation: [Clash of Tokens](https://github.com/dajiaohuang/clash_of_tokens).
 > 配套实现见上方的 Clash of Tokens 项目。
 
-**94 sources / 来源** · **49 direct adapters / 直接反代** · **41 aggregator adapters / 聚合适配** · **4 wrapper layers / 包装层**
+**95 sources / 来源** · **50 direct adapters / 直接反代** · **41 aggregator adapters / 聚合适配** · **4 wrapper layers / 包装层**
 
 Every row links to its reference project. The catalog only includes public evidence of a generic chat output such as OpenAI-compatible Chat Completions, OpenAI Responses, Anthropic Messages, or an equivalent HTTP/SSE contract.
 
@@ -114,6 +114,7 @@ Machine-readable data / 机器可读数据: [sources.json](sources.json) · Run 
 | [Raycast AI][e092]                       | In-App / Workspace / 应用内 / 工作区              | [xxxbrian/raycast2api][p092-1]                                                            | OpenAI-compatible                                     | A — Direct adapter / 直接反代     | App authentication / 应用鉴权                                                | Included / 纳入 |
 | [Sider][e093]                            | In-App / Workspace / 应用内 / 工作区              | [yeuxuan/sider2api][p093-1]                                                               | OpenAI-compatible                                     | A — Direct adapter / 直接反代     | App session / 应用会话                                                       | Included / 纳入 |
 | [FreeCoding][e094]                       | Embedded / In-App Assistant / 嵌入式 / App 内助手 | [Damue01/FreeCoding][p094-1]                                                              | OpenAI Chat/Responses + Anthropic Messages            | A — Direct adapter / 直接反代     | Android app session / Android 应用会话                                       | Included / 纳入 |
+| [Tabbit Toy][e095]                       | Embedded / Browser Assistant / 嵌入式 / 浏览器内助手 | [goehou/tabbit-toy][p095-1]                                                               | OpenAI-compatible                                     | A — Direct adapter / 直接反代     | Browser product protocol / 浏览器产品协议                                       | Included / 纳入 |
 
 [e001]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-1
 [e002]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-2
@@ -209,6 +210,7 @@ Machine-readable data / 机器可读数据: [sources.json](sources.json) · Run 
 [e092]: https://github.com/xxxbrian/raycast2api#awesome-2api-entry-92
 [e093]: https://github.com/yeuxuan/sider2api#awesome-2api-entry-93
 [e094]: https://github.com/Damue01/FreeCoding/tree/main#awesome-2api-entry-94
+[e095]: https://github.com/goehou/tabbit-toy#awesome-2api-entry-95
 [p001-1]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-project-1-1
 [p002-1]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-project-2-1
 [p002-2]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-project-2-2
@@ -327,6 +329,7 @@ Machine-readable data / 机器可读数据: [sources.json](sources.json) · Run 
 [p092-1]: https://github.com/xxxbrian/raycast2api#awesome-2api-project-92-1
 [p093-1]: https://github.com/yeuxuan/sider2api#awesome-2api-project-93-1
 [p094-1]: https://github.com/Damue01/FreeCoding/tree/main#awesome-2api-project-94-1
+[p095-1]: https://github.com/goehou/tabbit-toy#awesome-2api-project-95-1
 
 ## Contributing
 
