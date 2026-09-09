@@ -53,6 +53,7 @@ SHAPE_LABELS = {
     "Language Server / Devin HTTPS 两条路径": "Language Server / Devin HTTPS paths / Language Server / Devin HTTPS 两条路径",
     "OAuth/产品协议": "OAuth / product protocol / OAuth/产品协议",
     "Web AI 助手": "Web AI assistant / Web AI 助手",
+    "Android 应用会话": "Android app session / Android 应用会话",
     "Web 会话": "Web session / Web 会话",
     "Web 会话/实时事件": "Web session / realtime events / Web 会话/实时事件",
     "Web 内置聊天助手": "Embedded web chat assistant / Web 内置聊天助手",
@@ -177,6 +178,9 @@ def main() -> None:
         "> A source-backed index of web, app, desktop, browser, and coding assistants wrapped into generic chat APIs.",
         "> 基于公开来源，整理将网页、App、桌面端、浏览器和编码助手接入通用聊天 API 的项目。",
         "",
+        "> Companion implementation: [Clash of Tokens](https://github.com/dajiaohuang/clash_of_tokens).",
+        "> 配套实现见上方的 Clash of Tokens 项目。",
+        "",
         f"**{len(entries)} sources / 来源** · **{levels.get('A', 0)} direct adapters / 直接反代** · **{levels.get('B', 0)} aggregator adapters / 聚合适配** · **{levels.get('C', 0)} wrapper layers / 包装层**",
         "",
         "Every row links to its reference project. The catalog only includes public evidence of a generic chat output such as OpenAI-compatible Chat Completions, OpenAI Responses, Anthropic Messages, or an equivalent HTTP/SSE contract.",
@@ -217,10 +221,9 @@ def main() -> None:
         "",
         "Add one row only when a public implementation or provider declaration clearly wraps a web, app, browser, desktop, or coding-assistant session into a reusable generic chat API. Keep the evidence level honest and do not submit cookies, tokens, private endpoints, personal data, or bypass instructions. See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md). / 仅在公开实现或 Provider 声明确实将网页、App、浏览器、桌面端或编码助手会话包装为可复用通用聊天 API 时新增条目；如实填写证据等级，不要提交 Cookie、Token、私有端点、个人数据或绕过说明。详见上述文档。",
         "",
-        "Related implementation / 相关实现: [Clash of Tokens](https://github.com/dajiaohuang/clash_of_tokens). This repository is the index and does not bundle upstream credentials. / 本仓库只维护目录，不捆绑上游凭据。",
         "",
     ]
-    README.write_text("\n".join(lines), encoding="utf-8")
+    README.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

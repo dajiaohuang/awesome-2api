@@ -3,7 +3,10 @@
 > A source-backed index of web, app, desktop, browser, and coding assistants wrapped into generic chat APIs.
 > 基于公开来源，整理将网页、App、桌面端、浏览器和编码助手接入通用聊天 API 的项目。
 
-**93 sources / 来源** · **48 direct adapters / 直接反代** · **41 aggregator adapters / 聚合适配** · **4 wrapper layers / 包装层**
+> Companion implementation: [Clash of Tokens](https://github.com/dajiaohuang/clash_of_tokens).
+> 配套实现见上方的 Clash of Tokens 项目。
+
+**94 sources / 来源** · **49 direct adapters / 直接反代** · **41 aggregator adapters / 聚合适配** · **4 wrapper layers / 包装层**
 
 Every row links to its reference project. The catalog only includes public evidence of a generic chat output such as OpenAI-compatible Chat Completions, OpenAI Responses, Anthropic Messages, or an equivalent HTTP/SSE contract.
 
@@ -110,6 +113,7 @@ Machine-readable data / 机器可读数据: [sources.json](sources.json) · Run 
 | [PromptQL 应用聊天][e091]                    | In-App / Workspace / 应用内 / 工作区              | [OmniRoute promptql][p091-1]                                                              | OpenAI-compatible                                     | B — Aggregator adapter / 聚合适配 | App session / 应用会话                                                       | Included / 纳入 |
 | [Raycast AI][e092]                       | In-App / Workspace / 应用内 / 工作区              | [xxxbrian/raycast2api][p092-1]                                                            | OpenAI-compatible                                     | A — Direct adapter / 直接反代     | App authentication / 应用鉴权                                                | Included / 纳入 |
 | [Sider][e093]                            | In-App / Workspace / 应用内 / 工作区              | [yeuxuan/sider2api][p093-1]                                                               | OpenAI-compatible                                     | A — Direct adapter / 直接反代     | App session / 应用会话                                                       | Included / 纳入 |
+| [FreeCoding][e094]                       | Embedded / In-App Assistant / 嵌入式 / App 内助手 | [Damue01/FreeCoding][p094-1]                                                              | OpenAI Chat/Responses + Anthropic Messages            | A — Direct adapter / 直接反代     | Android app session / Android 应用会话                                       | Included / 纳入 |
 
 [e001]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-1
 [e002]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-entry-2
@@ -204,6 +208,7 @@ Machine-readable data / 机器可读数据: [sources.json](sources.json) · Run 
 [e091]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-entry-91
 [e092]: https://github.com/xxxbrian/raycast2api#awesome-2api-entry-92
 [e093]: https://github.com/yeuxuan/sider2api#awesome-2api-entry-93
+[e094]: https://github.com/Damue01/FreeCoding/tree/main#awesome-2api-entry-94
 [p001-1]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-project-1-1
 [p002-1]: https://github.com/xtekky/gpt4free/blob/main/g4f/Provider/__init__.py#awesome-2api-project-2-1
 [p002-2]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-project-2-2
@@ -321,9 +326,8 @@ Machine-readable data / 机器可读数据: [sources.json](sources.json) · Run 
 [p091-1]: https://github.com/diegosouzapw/OmniRoute/blob/release/v3.8.51/docs/reference/PROVIDER_REFERENCE.md#awesome-2api-project-91-1
 [p092-1]: https://github.com/xxxbrian/raycast2api#awesome-2api-project-92-1
 [p093-1]: https://github.com/yeuxuan/sider2api#awesome-2api-project-93-1
+[p094-1]: https://github.com/Damue01/FreeCoding/tree/main#awesome-2api-project-94-1
 
 ## Contributing
 
 Add one row only when a public implementation or provider declaration clearly wraps a web, app, browser, desktop, or coding-assistant session into a reusable generic chat API. Keep the evidence level honest and do not submit cookies, tokens, private endpoints, personal data, or bypass instructions. See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md). / 仅在公开实现或 Provider 声明确实将网页、App、浏览器、桌面端或编码助手会话包装为可复用通用聊天 API 时新增条目；如实填写证据等级，不要提交 Cookie、Token、私有端点、个人数据或绕过说明。详见上述文档。
-
-Related implementation / 相关实现: [Clash of Tokens](https://github.com/dajiaohuang/clash_of_tokens). This repository is the index and does not bundle upstream credentials. / 本仓库只维护目录，不捆绑上游凭据。
